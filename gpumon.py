@@ -10,6 +10,7 @@ from pytz import timezone
 # Define memory threshold (in MiB)
 MEMORY_THRESHOLD = 20480  # 20GB in MiB
 CHECK_INTERVAL = 60  # Check every 60 seconds
+TIMEZONE = "Asia/Taipei"
 
 
 # Set timezone to Asia/Taipei
@@ -17,7 +18,7 @@ def timetz(*args):
     return datetime.now(tz).timetuple()
 
 
-tz = timezone("Asia/Taipei")
+tz = timezone(TIMEZONE)
 logging.Formatter.converter = timetz
 
 # Configure logging
