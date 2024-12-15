@@ -33,19 +33,20 @@
    export EMAIL_PASSWORD=your_password
    ```
 
-2. Run the script:
+2. Adjust the configuration in `gpumon.py` as needed:
+   - `MEMORY_THRESHOLD`: The free memory threshold for notifications (in MiB). Default is 20480 (20GB).
+   - `CHECK_INTERVAL`: The interval between checks (in seconds). Default is 60 seconds.
+   - `TIMEZONE`: The timezone for logging timestamps. Default is `Asia/Taipei`.
+
+3. Run the script:
    ```bash
    python gpumon.py
    ```
 
-3. Adjust the configuration as needed:
-   - `MEMORY_THRESHOLD`: The free memory threshold for notifications (in MiB). Default is 20480 (20GB).
-   - `CHECK_INTERVAL`: The interval between checks (in seconds). Default is 60 seconds.
-
 
 ## Logging
 Logs are stored in `gpu_monitor.log` and include:
-- Timestamp (Asia/Taipei timezone)
+- Timestamp
 - GPU memory statistics
 - Notification events
 
